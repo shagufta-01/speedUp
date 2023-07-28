@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html id="popup-panel">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title data-i18n="extName"></title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utilities.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="content enabled" tabindex="0">
+      <div class="w-100 content-container">
+        <header class="d-flex justify-content-between">
+          <img src="/Images/logo (1).svg" id="logo" alt="logo" /><button
+          class="d-flex align-items-center justify-content-center"
+          id="reset-all"
+        >
+        <!-- <div id="reset-all-img"></div> -->
+          <div id="reset-all-img"></div>
+          <span>Reset all</span></button
+          ><input type="checkbox" id="toggle" class="d-none" checked /><label
+            for="toggle"
+            class="switch position-relative"
+          ></label>
+        </header>
+        <div class="scope-wrapper d-flex justify-content-between w-100">
+          <div class="scope">
+            <label class="custom-input"
+              >For this tab<input 
+                type="radio"
+                checked
+                name="scope"
+                value="tab"
+                id="tab_id"
+                checked="" /><span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="scope">
+            <label class="custom-input"
+              >For this domain<input
+                type="radio"
+                name="scope"
+                id="domain_id"
+                value="domain" /><span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="scope">
+            <label class="custom-input"
+              >For all tabs<input
+                type="radio"
+                name="scope"
+                id="for_all_tabs"
+                value="global" /><span class="checkmark"></span
+            ></label>
+          </div>
+        </div>
+        <div
+          class="speed-wrapper w-100 justify-content-between align-items-center d-flex"
+        >
+          <button class="change-speed" id="change_speed_five" data-value="-0.05">-5%</button
+          ><button class="change-speed" id="change_speed_one"data-value="-0.01">-1%</button
+          ><input
+            id="speed"
+            type="number"
+            min="0"
+            max="1600"
+            value="100"
+          /><button class="change-speed" id="change_speed_onee"data-value="0.01">+1%</button
+          ><button class="change-speed" id="change_speed_fivee"data-value="0.05">+5%</button>
+        </div>
+        <div class="w-100 preset-container">  
+          <div class="preset-wrapper w-100 d-grid">
+            <button class="preset" id="data11" data-value="0.25">25%</button
+            ><button class="preset" id="data12" data-value="0.5">50%</button
+            ><button class="preset" data-value="0.75" id="data1">75%</button
+            ><button class="preset" data-value="0.9" id="data2">90%</button
+            ><button class="preset " data-value="1" id="data3">100%</button
+            ><button class="preset" data-value="1.1" id="data4">110%</button
+            ><button class="preset" data-value="1.25" id="data5">125%</button
+            ><button class="preset" data-value="1.5"  id="data6">150%</button
+            ><button class="preset" data-value="1.75" id="data7"> 175%</button
+            ><button class="preset" data-value="2" id="data8">200%</button
+            ><button class="preset" data-value="2.5" id="data9">250%</button
+            ><button class="preset" data-value="16" id="data10">1600%</button>
+          </div>
+        </div>
+       
+            
+       
+
+        <div class="information-wrapper w-100 flex-column">
+          <div class="w-100 d-flex domain align-items-center">
+            <span class="heading">Current playing:&nbsp;&nbsp;</span
+            ><span class="links" id="links">www.amazon.in&nbsp;</span>
+            <span class="current-domain">-</span>
+            <div class="more-information ">
+              <div class="title position-absolute">
+                <span id="page_title"></span>
+              </div>
+            </div>
+          </div>
+          <div class="play-information w-100 d-flex align-items-center">
+            <img class="playing-status" src="/Images/stop.svg" /><span>
+              <span class="time" id="time_y"></span>
+            </span>
+            <span class="duration"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
